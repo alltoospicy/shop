@@ -1,0 +1,108 @@
+/* Styles for navigation bar in each page */
+
+.forpage header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    justify-content: start;
+    margin: 0;
+    inline-size: 100%;
+    background-color: whitesmoke;
+}
+
+.forpage header nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-block: 1em;
+}
+
+.forpage header ul {
+    inline-size: 100%;
+    margin: 0;
+    padding: 0;
+    display: inherit;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.forpage header li {
+    text-indent: 0;
+    margin-inline-start: 1rem;
+    text-transform: lowercase;
+}
+
+.forpage header {
+    h2,
+    h3,
+    h4,
+    a {
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+/* Reponsive Header */
+
+@media screen and (max-width: 600px) {
+    .forpage header {
+        padding-block: 1rem;
+    }
+
+    .forpage header {
+        h2,
+        h3,
+        h4,
+        a {
+        }
+    }
+}
+
+/* Styles Specific to Main content */
+
+.container article {
+    display: flex;
+    flex-flow: row wrap;
+    padding-inline: 5vw;
+    margin-block: 2rem;
+    padding-inline: calc(20vw - 250px);
+
+}
+
+.container article:first-child {
+    margin-block-start: 20vh;
+}
+
+.container article > div {
+    flex: 1 400px;
+}
+
+.container article > div:first-child {
+    flex: 100%;
+}
+
+.container article div:first-child + div {
+    flex: 1 auto;
+    h3 {
+        font-size: 3rem;
+    }
+}
+
+.thumbnail {
+    block-size: 500px;
+}
+
+/* Responsive Main content */
+
+@media screen and (max-width: 1000px) {
+    .container article {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .thumbnail {
+        block-size: calc(40vh);
+    }
+}
